@@ -6,7 +6,7 @@
 #    By: alesanto <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/17 18:19:20 by alesanto          #+#    #+#              #
-#    Updated: 2020/03/01 13:37:59 by alesanto         ###   ########.fr        #
+#    Updated: 2020/03/01 14:18:02 by alesanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,19 +21,18 @@ start:
 			je				isdiff
 			cmp				byte [rdi + rax], 0
 			je				diff
-			mov				bl, byte[rdi + rax]
+			mov				bl, byte[rsi + rax]
 			mov				dl, byte[rdi + rax]
 			cmp				bl, dl 
 			jne				diff
 			jmp				start
 
-isdiff
+isdiff:
 			cmp				byte [rdi + rax], 0
 			je				nodiff
 			jmp				diff
 
 diff:
-			mov				dl, byte[rdi + rax]
 			sub				dl, byte[rsi + rax]
 			cmp				dl, 0
 			jl				lessdiff
