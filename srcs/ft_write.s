@@ -6,7 +6,7 @@
 #    By: alesanto <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/17 19:33:21 by alesanto          #+#    #+#              #
-#    Updated: 2020/02/18 20:16:02 by alesanto         ###   ########.fr        #
+#    Updated: 2020/03/01 13:39:54 by alesanto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,4 +16,9 @@
 _ft_write:
 				mov				rax, 0x2000004
 				syscall
+				jc				error	
 				ret
+
+error:
+				mov			 	rax, -1
+				ret	
