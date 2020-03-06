@@ -14,14 +14,30 @@
 			section			.text
 
 _ft_strcmp:
-		mov		rcx, 0
-loop:
-		mov		rax, 0
-		mov		al, [rdi]
-		mov		cl, [rsi]
-		inc		rdi
-		inc		rsi
-		sub		rax, rcx
-		jz		loop
-end:
-		ret
+			mov				rax, -1
+start:		
+			inc				rax
+			cmp				byte [rsi + rax], 0
+			je				nodiff
+			cmp				byte [rdi + rax], 0
+			je				nodiff
+			mov				bl, byte[rdi + rax]
+			mov				dl, byte[rdi + rax]
+			cmp				bl, dl 
+			jne				diff
+			jmp				start
+diff:
+			mov				dl, byte[rdi + rax]
+			sub				dl, byte[rsi + rax]
+			cmp				dl, 0
+			jl				lessdiff
+			mov				rax, 1
+			jmp				return
+return:
+			ret
+nodiff:
+			mov				rax, 0
+			jmp				return
+lessdiff:
+			mov				rax, -1 
+			jmp				return
