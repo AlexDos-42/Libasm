@@ -6,7 +6,7 @@
 /*   By: alesanto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 17:00:53 by alesanto          #+#    #+#             */
-/*   Updated: 2020/03/06 12:46:00 by alesanto         ###   ########.fr       */
+/*   Updated: 2020/03/06 13:05:35 by alesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,12 @@ int		main(int argc, char **argv)
 	printf("ret    strcmp : %d\n", ret);
 	ret = ft_strcmp("", "");
 	printf("ret ft_strcmp : %d\n", ret);
+	ret = strcmp("\xff", "\xff\xfe");
+	printf("ret    strcmp : %d\n", ret);
+	ret = ft_strcmp("\xff", "\xff\xfe");
+	printf("ret ft_strcmp : %d\n", ret);
+	
+
 	printf("_____________\n");
 
 	char *s1;
