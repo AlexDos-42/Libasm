@@ -12,7 +12,7 @@
 
 			global			_ft_strlen
 			section			.text
-; Alors notre ft_strlen en C : on met i = -1 ou 0, on incremente tant que str[i] != '\0'
+; Alors notre ft_strlen en C : on met i = -1 ou 0, on incremente tant que str[i] != '\0', ici str c'est rdi
 _ft_strlen:
 			mov				rax, -1 		; ici rax c'est i, et on l'initie à -1
 
