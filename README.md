@@ -1,4 +1,8 @@
-# Libasm [![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/alesanto/libasm)](https://github.com/JaeSeoKim/badge42)
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=timeGradient&height=100&text=Libasm&fontSize=64&fontAlignY=40&fontColor=d6ace6" alt="header" width="100%" />
+
+<p align="right">
+<img src="https://badge42.herokuapp.com/api/project/alesanto/libasm" alt="AlexDos-42" />
+</p>
 
 The aim of this project is to get familiar with assembly language.
 
